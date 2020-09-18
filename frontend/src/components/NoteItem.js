@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-const NoteItem = (props) => (
-  <li>
-    <h2>Title</h2>
-    <p>Caption...</p>
+const NoteItem = ({ note, selectNote }) => (
+  <li onClick={() => selectNote(note)}>
+    <h2>{note.title}</h2>
+    <p className="truncate">{note.body}</p>
   </li>
 );
 
